@@ -1,0 +1,18 @@
+import random
+otherteams= ["Arsenal(ENG)","Astana (KAZ)","Atlético (ESP)","BATE (BLR)","CSKA Moskva (RUS)","Dinamo Zagreb (CRO)","Dynamo Kyiv (UKR)","Galatasaray (TUR)","Gent (BEL)","Leverkusen (GER)","Lyon (FRA)","M. Tel-Aviv (ISR)","Malmö (SWE)","Man. City (ENG)","Man. United (ENG)","Mönchengladbach (GER)","Olympiacos (GRE)","Porto (POR)","Real Madrid (ESP)","Roma (ITA)","Sevilla (ESP)","Shakhtar Donetsk (UKR)","Valencia (ESP)","Wolfsburg (GER)"]
+localchampion=["Barcelona (ESP)","Bayern (GER)","Benfica (POR)","Chelsea (ENG)","Juventus (ITA)","Paris (FRA)","PSV (NED)","Zenit (RUS)"]
+namelis=['A','B','C','D','E','F','G','H']
+random.shuffle(otherteams)
+random.shuffle(localchampion)
+z=int(len(otherteams)/len(localchampion))
+j=0
+p=0
+for i in range(len(localchampion)):
+    li=[]
+    li.append(localchampion[i])
+    for j in range(z):
+        li.append(otherteams[j])
+        j=j+1
+    print("                           Group ",namelis[p])
+    p=p+1
+    print(li,sep=',',end="\n\n\n")
